@@ -43,7 +43,7 @@ export function Counter(){
         <>
             <p>{count}</p>
             <button onClick={()=> setCount(prevCount => prevCount + 1)}>Increase</button>
-            <button onClick={()=> setCount(prevCount => prevCount - 1)}>Decrease</button>
+            <button onClick={()=> setCount(prevCount => prevCount > 0? prevCount - 1 : prevCount)}>Decrease</button>
         </>
     )
 }
